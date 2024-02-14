@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import { resources } from './assets/ressurser'
 //import './ressurser.js'
 //import './script.js'
 
