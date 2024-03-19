@@ -1,5 +1,4 @@
 import { resources } from "../assets/ressurser"
-import Content from './Content'
 export default function Category(){
 
     return(
