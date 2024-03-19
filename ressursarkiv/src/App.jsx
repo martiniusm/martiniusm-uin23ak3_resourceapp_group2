@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Nav from './Components/Nav'
 
 
 function App() {
@@ -7,20 +8,7 @@ function App() {
 
   return (
     <>
-      <div id="container">
-        <header>
-            <ul id="options">
-                <li id="HTML" className="menuItem" onClick="showInfo(event)">HTML</li>
-                <li id="CSS" className="menuItem" onClick="showInfo(event)">CSS</li>
-                <li id="JavaScript" className="menuItem" onClick="showInfo(event)">JavaScript</li>
-                <li id="React" className="menuItem" onClick="showInfo(event)">React</li>
-                <li id="Sanity and headless CMS" className="menuItem" onClick="showInfo(event)">Sanity and headless CMS</li>
-            </ul>
-        </header>
-    </div>
-    <main>
-      
-    </main>
+      <Nav />
     </>
   )
 }
