@@ -4,7 +4,7 @@ export default function Nav(){
     return(
         <>
         <ul>
-            {resources.map ((item, i) => <li key={i}><h2>{item.category}</h2></li>)}
+            {resources.map ((element, i) => <li key={i}><h2>{element.category}</h2></li>)}
         </ul>
         </>
     )
