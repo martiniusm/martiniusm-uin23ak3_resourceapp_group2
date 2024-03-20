@@ -1,16 +1,24 @@
-import { resources } from "../assets/ressurser"
-import Content from './Content'
-import Nav from './Nav'
-export default function Category(){
-
-    return(
-        <>
-        {resources.map(resource =>
-            <Content category={resource.category} text={resource.text} sources={resource.sources}/>
-            )}
-        {resources.map(category =>
-            <Nav category={category.category}/>
-            )}
-        </>
-    )
-}
+export default function Category({ selectedCategory, resources }) {
+    return (
+      <div>
+        {selectedCategory && (
+          resources
+            .filter((resource) => resource.category === selectedCategory)
+            .map((resource, i) => (
+              <article key={i}>
+                <h2>{resource.category}</h2>
+                <p>{resource.text}</p>
+                <ul>
+                  {resource.sources.map((element, j) => (
+                    <li key={j}>
+                      <a href={element.url}>{element.title}</a>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))
+        )}
+      </div>
+    );
+  }
+  
