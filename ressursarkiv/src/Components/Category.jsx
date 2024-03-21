@@ -1,9 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 export default function Category({ resources, category, setCategory}) {
   const {id} = useParams()
-  useEffect(()=>{setCategory(id.toUpperCase())})
+  const [state, setState] = useState(id)
+  useEffect(()=>{setCategory(id.toUpperCase())}, [id])
 
     return (
       <>
