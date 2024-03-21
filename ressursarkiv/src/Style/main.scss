@@ -24,10 +24,15 @@ body{
         li {
             list-style: none;
             background-color: #2A324B;
-            padding: .5rem 3rem;
-            color: #fff;
             font-weight: 600;
             cursor: pointer;
+            a{
+                display: flex;
+                color: #fff;
+                h2{
+                    margin: 1.25rem 3rem;
+                }
+            }
         }
         :hover, .active{
             background-color: white;

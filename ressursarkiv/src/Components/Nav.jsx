@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 export default function Nav({ handleCategorySelect, categories }) {
-    const {id} = useParams()
+    const {catId} = useParams()
 
     const [active, setActive] = useState(null);
 
