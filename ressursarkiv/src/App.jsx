@@ -1,18 +1,10 @@
-import { useState } from 'react'
-import './App.css'
-import Nav from './Components/Nav'
-import Category from './Components/Category'
+import React from 'react'
+import Layout from './Components/Layout'
 
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <Nav />
-      <Category />
-    </>
-  )
+export default function App() {
+    return (
+        <div>
+            <Layout />
+        </div>
+    )
 }
-
-export default App
