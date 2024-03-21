@@ -1,10 +1,10 @@
 import React from 'react'
-import Content from './Components/Content'
+import Layout from './Components/Layout'
 
 export default function App() {
     return (
         <div>
-            <Content />
+            <Layout />
         </div>
     )
 }
