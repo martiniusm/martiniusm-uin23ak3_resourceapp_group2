@@ -12,7 +12,7 @@ export default function Category({ resources, category, setCategory}) {
             <h2>{resource.category}</h2>
             <p>{resource.text}</p>
             <ul>
-                {resource.sources.map((element, i) => <li key={i}><a href={element.url}>{element.title}</a></li>)}
+                {resource.sources.map((element, i) => <li key={i}><a target="_blank" href={element.url}>{element.title}</a></li>)}
             </ul>
         </article>
             )
