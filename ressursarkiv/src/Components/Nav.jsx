@@ -1,11 +1,13 @@
-import { resources } from "../assets/ressurser";
+import React from 'react'
 
-export default function Nav(){
-    return(
-        <>
+export default function Nav({ handleCategorySelect, categories }) {
+    return (
         <ul>
-            {resources.map ((element, i) => <li key={i}><h2>{element.category}</h2></li>)}
+            {categories.map((category, i) => (
+                <li key={i} onClick={() => handleCategorySelect(category)}>
+                    <h2>{category}</h2>
+                </li>
+            ))}
         </ul>
-        </>
-    )
+    );
 }
