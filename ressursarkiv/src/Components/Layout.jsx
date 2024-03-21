@@ -1,20 +1,13 @@
 import React, { useState } from 'react'
 import Nav from './Nav'
-import Category from './Category'
-import { resources } from '../assets/ressurser'
+import { useParams } from 'react-router-dom'
 
-export default function Layout() {
-    const [selectedCategory, setSelectedCategory] = useState(null)
-
-    const handleCategorySelect = (category) => {
-        setSelectedCategory(category)
-    };
-
+export default function Layout({resources, children, category, setCategory}) {
+    
     return (
-        
             <>
-            <Nav handleCategorySelect={handleCategorySelect} categories={resources.map(resource => resource.category)} />
-            <Category selectedCategory={selectedCategory} resources={resources} />
+            <Nav resources={resources} category={category} />
+            {children}
             </>
     )
 }

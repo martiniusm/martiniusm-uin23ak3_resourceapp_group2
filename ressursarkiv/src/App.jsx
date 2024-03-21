@@ -1,14 +1,23 @@
-import React from 'react'
+import './Style/main.scss'
+import React, { useState } from 'react'
 import Layout from './Components/Layout'
 import { Route, Routes } from 'react-router-dom'
-export default function App() {
+import { resources } from './assets/ressurser'
+import Category from './Components/Category'
+import Home from './Components/Home'
+
+function App() {
+    const [category, setCategory] = useState("HTML")
     return (
         <>
-            <Layout>
-                <Routes>
-                    <Route path='/:CatId' element={<Layout />} />
-                </Routes>
-            </Layout>
+        <Layout resources={resources} category={category} setCategory={setCategory}>
+            <Routes>
+                <Route path='/' exact element={<Home />} />
+                <Route path='/:id' element={<Category resources={resources} category={category} setCategory={setCategory}/>} />
+            </Routes>
+        </Layout>
         </>
     )
 }
+
+export default App
