@@ -1,11 +1,11 @@
 export default function Category({ selectedCategory, resources }) {
     return (
-      <div>
+      <>
         {selectedCategory && (
           resources
             .filter((resource) => resource.category === selectedCategory)
             .map((resource, i) => (
-              <article key={i}>
+              <article className="input" key={i}>
                 <h2>{resource.category}</h2>
                 <p>{resource.text}</p>
                 <ul>
@@ -18,7 +18,7 @@ export default function Category({ selectedCategory, resources }) {
               </article>
             ))
         )}
-      </div>
+      </>
     );
   }
   

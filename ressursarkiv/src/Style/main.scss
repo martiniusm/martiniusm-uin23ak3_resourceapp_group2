@@ -1,21 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;1,400&display=swap');
 
-#root {
-    font-family: 'Montsterrat', sans-serif;
+body{
     background-color: #E1E5EE;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-    ul{
+    font-family: 'Montsterrat', sans-serif;
+}
+
+
+
+#root {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 200px;
+    padding: 4rem 0 4rem 0;
+
+    .category {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
         
-        li{
+        li {
             list-style: none;
             background-color: #2A324B;
-            
+            padding: .5rem 3rem;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        :hover, .active{
+            background-color: white;
+            color: black;
+        }
+        .active {
+            background-color: white;
+            color: black;
         }
     }
+
+    .input {
+        background-color: #fff;
+        padding: 4rem;
+        color: #2A324B;
+
+        h2 {
+            margin: 0;
+            color: #2A324B;
+        }
+    }
+
 }
